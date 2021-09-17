@@ -20,7 +20,7 @@
 
                 if($password_decode){
                     echo "login successful";
-                   include 'index.html';
+                   include 'main.html';
                 }else{
                     echo "Password Incorrect";
                 }
