@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Document</title>
+
+
+    <!--Customized CSS-->
+    <link rel="stylesheet" href="reglog.css">
+
+    <!--FontAwesome link-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+</head>
+<body>
+    
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+        
+        <div class="signup">
+          <form action="signup.php" method="POST">
+            <label for="chk" aria-hidden="true">SignUp</label>
+           <div class="form-wrap">
+             <i class="fas fa-user"></i>
+              <input type="text" name="txt" placeholder="Username" required>
+            </div>
+             <div class="form-wrap">
+               <i class="fas fa-envelope"></i>
+               <input type="email" name="email" placeholder="Email" required>
+             </div>
+             <div class="form-wrap">
+               <i class="fas fa-lock"></i>
+               <input type="password" name="password" placeholder="Password" required>
+             </div>
+
+             <div class="form-wrap">
+              <i class="fas fa-lock"></i>
+              <input type="password" name="cpass" placeholder="Confirm Password" required>
+            </div>
+
+             <div class="form-wrap">
+              <i class="fas fa-phone"></i>
+              <input type="phone" name="phone" placeholder="Mobile no.." required>
+            </div>
+            <button type="submit" name="signup">SignUp</button>
+          </form>
+        </div>
+        
+        <div class="login">
+          <form action="signin.php"
+           method="POST">
+            <label for="chk" aria-hidden="true">Login</label>
+            <div class="form-wrap">
+              <i class="fas fa-envelope"></i>
+              <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-wrap">
+              <i class="fas fa-lock"></i>
+              <input type="password" name="password" placeholder="Password" required>
+            </div>
+            <button type="submit" name="signin"> Login</button>
+          </form>
+        </div>
+      </div>
+</body>
+</html>

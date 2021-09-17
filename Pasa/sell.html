@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pasa | Post what you want to sell</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FontAweome CDN Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <section class="post">
+          <header>Create Post</header>
+          <form action="#" method="POST" enctype="multipart/form-data">
+            <div class="content">
+             <img src="icons/a.png" alt="logo">
+              <div class="details">
+                <p>Pasa Online Shop</p>
+                
+              </div>
+            </div>
+            <textarea placeholder="Say something about the goods" spellcheck="false" required></textarea>
+            
+            <div class="options">
+              <p>Add to Your Post</p>
+              <ul class="list">
+
+              <!--  <img src="icons/gallery.svg" alt="gallery">-->
+                
+              <label for="image">
+                <input type="file" name="image" id="image" style="display:none;"/>
+                <img src="icons/gallery.svg"/>
+             </label>
+
+
+
+              </ul>
+            </div>
+            <button>Post</button>
+          </form>
+        </section>
+        
+      </div>
+    </div>
+
+    <script>
+      const container = document.querySelector(".container"),
+      privacy = container.querySelector(".post .privacy"),
+      arrowBack = container.querySelector(".audience .arrow-back");
+
+      privacy.addEventListener("click", () => {
+        container.classList.add("active");
+      });
+
+      arrowBack.addEventListener("click", () => {
+        container.classList.remove("active");
+      });
+    </script>
+    
+  </body>
+</html>
+
+
