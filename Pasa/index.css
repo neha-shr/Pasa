@@ -175,6 +175,25 @@ max-width: 100%;
     color:var(--primary);
 }
 
+.btn{
+    display: inline-block;
+    border-radius: 5rem;
+    background-color: var(--primary);
+    padding: 1.3rem 5rem;
+    font-weight: 600;
+    box-shadow: 0 1rem 1rem rgba(0,0,0,0.3);
+    margin-top: 4 rem;
+}
+
+.searchform .btn{
+    border: none;
+    outline: none;
+   padding: 10px 15px;
+   border-radius: 50%;
+
+}
+
+
 #search-form #close{
     position: absolute;
     color:#fff;
@@ -223,15 +242,7 @@ max-width: 100%;
 
 }
 
-.btn{
-    display: inline-block;
-    border-radius: 5rem;
-    background-color: var(--primary);
-    padding: 1.3rem 5rem;
-    font-weight: 600;
-    box-shadow: 0 1rem 1rem rgba(0,0,0,0.3);
-    margin-top: 4 rem;
-}
+
 
 .special-content .right img{
     position: absolute;
