@@ -37,7 +37,7 @@
                 <!--Logo-->
                 <div class="logo">
                    <!-- <h2>Pasa</h2> -->
-                   <img src="icons/main.png" alt="" >
+                   <img src="icons/main.png" alt="" width="625px">
                 </div>
 
                 <!--Menu bar-->
@@ -82,9 +82,10 @@
 
          <!-- search form  -->
 
-        <form action="" id="search-form">
+        <form action="search.php" method="POST" id="search-form" class="searchform">
             <input type="search" placeholder="search here..." name="" id="search-box">
-            <label for="search-box" class="fas fa-search"></label>
+            <!-- <label for="search-box" class="fas fa-search"></label> -->
+            <button class="btn" type="submit" name="search"><i class="fas fa-search"></i></button>
             <i class="fas fa-times" id="close"></i>
         </form>
 
