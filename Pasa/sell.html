@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="container">
-      <div class="wrapper">
+      
         <section class="post">
           <header>Create Post</header>
           <form action="#" method="POST" enctype="multipart/form-data">
@@ -27,12 +27,10 @@
             <div class="options">
               <p>Add to Your Post</p>
               <ul class="list">
-
-              <!--  <img src="icons/gallery.svg" alt="gallery">-->
                 
               <label for="image">
-                <input type="file" name="image" id="image" style="display:none;"/>
-                <img src="icons/gallery.svg"/>
+                <input type="file" accept="image/*" name="image" id="image" onchange="loadFile(event)" style="display:none;"/>
+                <img id="output" src="icons/gallery.svg"/>
              </label>
 
 
@@ -43,21 +41,22 @@
           </form>
         </section>
         
-      </div>
+      
     </div>
 
     <script>
-      const container = document.querySelector(".container"),
-      privacy = container.querySelector(".post .privacy"),
-      arrowBack = container.querySelector(".audience .arrow-back");
+     var loadFile = function(event){
+       var image = document.getElementById('output');
+       image.src = URL.createObjectURL(event.tRget.files[0]);
+     };
 
-      privacy.addEventListener("click", () => {
-        container.classList.add("active");
-      });
 
-      arrowBack.addEventListener("click", () => {
-        container.classList.remove("active");
-      });
+
+    
+     
+    
+
+     
     </script>
     
   </body>

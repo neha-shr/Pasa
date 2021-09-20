@@ -34,11 +34,10 @@ body{
 .container.active{
   height: 590px;
 }
-.container .wrapper{
-  width: 1000px;
-  display: flex;
+.container {
+ display: flex;
 }
-.container .wrapper section{
+.container section{
   width: 500px;
   background: #fff;
 }
