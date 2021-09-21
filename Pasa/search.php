@@ -2,10 +2,12 @@
 
     include 'dbconn.php';
 
-    if(isset($_POST['search'])){
-        $search =mysqli_real_escape_string($conn, $_POST['searchbox']);
+    if(isset($_POST['searchbtn'])){
+        $search = $_POST['searchbox'];
 
-        $search_query = "select * from 'search' where s_name LIKE '%$search%' or s_description like '%$search%'";
+        $search_conn = mysqli_real_escape_string($conn, $search);
+
+        $search_query = "select * from 'search' where s_name LIKE '%$search_conn%' or s_description LIKE ' %$search_conn%'";
         $query = mysqli_query($conn,$search_query);
 
         $search_count = mysqli_num_rows($query);
