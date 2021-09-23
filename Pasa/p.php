@@ -93,6 +93,19 @@
     
 </header>
 
+<?php
+
+include "dbconn.php";
+
+    $query = "SELECT * FROM post ";
+    $result = mysqli_query($conn, $query);
+    while($row = mysqli_query_fetch_assoc($result) { 
+
+
+?>
+
+
+
 <!--Product Description-->
 
 <section class="product-description">
@@ -103,7 +116,8 @@
             <img src="dress/j.jpg" alt="">
         </div>
         <div class="col-2">
-          <h2>Summer Bohemian Floral Casual Wrap V Neck Ruffle Cap Sleeveless Dress</h2>
+          <h2><?php echo $row['title']; ?></h2>
+          <?php } ?>
           <p class="price"> <span>$73</p></span><br>
          <div>
             <select>
@@ -140,6 +154,17 @@ Sandals And Delicate Jewelry<br/>
         </div>
     </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
 </section>
 
 <section class="product-part">
