@@ -453,5 +453,21 @@ select {
     color: var(--primary);
 }
 
+/* main */
 
+.logout{
+    height: 3rem;
+    width: 7rem;
+    font-size: 2rem;
+    padding: 1rem;
+    overflow: hidden;
+    margin-right: 10px;
+    background: var(--primary);
+  }
+  .logout button{
+    border: none;
+    outline: none;
+    background: var(--primary);
+    font-size: 1.5rem;
+}
 
