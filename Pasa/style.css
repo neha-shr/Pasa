@@ -47,11 +47,7 @@ max-width: 100%;
 .hamburger{
  display: none;
 }
-/* .logo{
-  outline: 2px solid var(--primary);
-  outline-offset: 0.2rem;
-  padding: 0 1.5rem;
-} */
+
 
 .logo{
   height: 15rem;
@@ -88,28 +84,16 @@ max-width: 100%;
   padding: 0.5rem;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  /* border-radius: 50%;
-  background: #eee; */
   height: 3.5rem;
   width: 3.5rem;
   text-align: center;
-  /* justify-content: center; */
+  
 }
 
 .nav .icons div:hover{
-  /* background: var(--primary); */
   transform: rotate(360deg);
-  /* color: #fff; */
 }
-/* .nav .icons div #search1{
-  outline: none;
-  border: 1px solid black;
-  font-size: 1.3rem;
-  display: none;
-} */
-/* .nav .icons div .search:hover{
-  display: show;
-} */
+
 .nav .icons div:not(last-child){
   margin-right: 0.5rem;
 }
