@@ -18,6 +18,8 @@
                 $email_pass = mysqli_fetch_assoc($query);
 
                 $pass = $email_pass['password'];
+                
+                $_SESSION['username'] = $email_pass['username'];
 
                 $password_decode = password_verify($password, $pass);
 
