@@ -88,19 +88,29 @@
 
     
 </header>
-
+<body>
 <!--Product Description-->
+<?php
+
+    include "dbconn.php";
+    $selectquery = "select * from post";
+    $query = mysqli_query($conn, $selectquery);
+    $result = mysqli_fetch_array($query);
+    while($result = mysqli_fetch_array($query)){
+?>
+
+
 
 <section class="product-description">
     <div class="small-container single-product">
       <div class="row">
         <div class="col-2">
 
-            <img src="dress/j.jpg" alt="">
+        <img src=" <?php  echo $result['image'];   ?> "/>
         </div>
         <div class="col-2">
-          <h2>Summer Bohemian Floral Casual Wrap V Neck Ruffle Cap Sleeveless Dress</h2>
-          <p class="price"> <span>$73</p></span><br>
+          <h2><?php  echo $result['title'];   ?> </h2>
+          <p class="price"> <span> <?php  echo $result['price'];   ?></p></span><br>
          <div>
             <select>
                 <option value="Select Size" selected disabled>Select Size</option>
@@ -112,31 +122,16 @@
          </div>
           <button class="product-btn">Buy Now</button><br>
           <h3>Details</h3><br>
-          FEATURE DESIGN - Feminine Deep V neckline/ Simple Solid Color/
-Cute Ruffle Cap Sleeveless Sleeve Design/ Classic A-Line Silhouette.
-Knee Length <br/><br>
-
-HUGS YOUR FIGURE PERFECTLY - The Women Summer Dress Offers
- Your Comfortable Relaxed Fit While The Dress Will Show Your
- Charming Neckline, Gorgeous Waist Line And The High Waist 
-Design Will Visually Prolong Your Legs. This Women Casual 
-Summer Dress Is With A Elegant Feminine Look And Hugs Your
- Curves Perfectly<br/><br>
-
-FIT FOR ANY OCCASIONS - Women Vintage Dresses Could Be
- Dresses Up Or Down Depends On The Occasions: Great For 
-Everyday Look, Leisure, Hang Out, Vacation, Weekend, BBQ
- Party, Beach If Combine This Soft Flowing Dress With A 
-Sneakers Or Flats During The Day; If For Formal Places, 
-Such As Business Work, Party, Church, Wedding, Wedding Guest,
- Prom, Evening, Teaching Clothes That You Can With Strappy 
-Sandals And Delicate Jewelry<br/>
+         <p> <?php  echo $result['detail'];   ?>
           </p>
             
         </div>
     </div>
     </div>
 </section>
+<?php
+    }
+    ?>
 
 <section class="product-part">
     <div class="title"><h1>Product</h1></div>
