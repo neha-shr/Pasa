@@ -20,6 +20,7 @@ body{
 
  margin: 2%;
  display: flex;
+ justify-content: center;
 }
 
 .card{
@@ -28,6 +29,9 @@ body{
      box-shadow: 2px 2px 20px black;
      border-radius: 5px; 
      margin: 2%;
+     overflow: hidden;
+ 
+  word-wrap: break-word;
 
     }
 
@@ -70,6 +74,7 @@ button{
   border: 1px solid black;
   border-radius: 5px;
   padding:10px;
+  justify-content: center;
   
   vertical-align: middle;
 }

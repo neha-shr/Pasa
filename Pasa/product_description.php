@@ -104,7 +104,7 @@
 <section class="product-description">
     <div class="small-container single-product">
       <div class="row">
-        <div class="col-2">
+        <div class="col-2" >
 
         <img src=" <?php  echo $result['image'];   ?> "/>
         </div>
