@@ -5,12 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pasa</title>
-    
- 
+     <!--Boxicon-->
+     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+     <!--FontAwesome link-->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
  
      <!--Css Links-->
      <link rel="stylesheet" href="index.css">
-     
+     <!-- <link rel="stylesheet" href="front.css"> -->
  
      <!--Font links-->
      <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -80,14 +84,27 @@
 
      <!-- search form  -->
 
-    <!-- <form action="" id="search-form">
+    <form action="" id="search-form">
         <input type="search" placeholder="search here..." name="" id="search-box">
         <label for="search-box" class="fas fa-search"></label>
         <i class="fas fa-times" id="close"></i>
-    </form> -->
+    </form>
 
     
 </header>
+
+<?php
+
+include "dbconn.php";
+
+    $query = "SELECT * FROM post ";
+    $result = mysqli_query($conn, $query);
+    while($row = mysqli_query_fetch_assoc($result) { 
+
+
+?>
+
+
 
 <!--Product Description-->
 
@@ -99,7 +116,8 @@
             <img src="dress/j.jpg" alt="">
         </div>
         <div class="col-2">
-          <h2>Summer Bohemian Floral Casual Wrap V Neck Ruffle Cap Sleeveless Dress</h2>
+          <h2><?php echo $row['title']; ?></h2>
+          <?php } ?>
           <p class="price"> <span>$73</p></span><br>
          <div>
             <select>
@@ -136,6 +154,17 @@ Sandals And Delicate Jewelry<br/>
         </div>
     </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
 </section>
 
 <section class="product-part">

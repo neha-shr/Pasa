@@ -13,7 +13,11 @@
    
     <!--Css Links-->
     <link rel="stylesheet" href="style.css">
+<<<<<<< HEAD
+    <!-- <link rel="stylesheet" href="front.css"> -->
+=======
     
+>>>>>>> 430334140dab6e73ae0ea3aeafe41938e72c8d54
 
     <!--Font links-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -35,7 +39,7 @@
                 <!--Logo-->
                 <div class="logo">
                    <!-- <h2>Pasa</h2> -->
-                   <img src="icons/main.png" alt="" width="625px">
+                   <img src="icons/logo.png" alt="" >
                 </div>
 
                 <!--Menu bar-->
@@ -51,7 +55,7 @@
                     <ul class="nav-list d-flex">
     
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Home</a>
+                            <a href="index.html" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
                             <a href="#about" class="nav-link">About</a>
@@ -91,24 +95,24 @@
       
             <section class="post">
               <header>Create Post</header>
-              <form action="#" method="POST" enctype="multipart/form-data">
+              
+              <form action="sell.php" method="POST" enctype="multipart/form-data">
                 <div class="content">
-                 <img src="icons/a.png" alt="logo">
+                 <img src="icons/logo.png" alt="logo">
                   <div class="details">
-                    <p>Pasa Online Shop</p>
-                    
+                    <p>Pasa Online Shop</p>  
                   </div>
                 </div>
                 <div class="post_fields">
                     <div class=" post_field title">
-                        <label>Title</label><textarea placeholder="Title here" spellcheck="false" required></textarea>
+                        <label>Title</label><textarea name="title" placeholder="Title here" spellcheck="false" required></textarea>
                       </div>
                     <div class="post_field price">
-                      <label>Price</label><input type="text"  placeholder="Price here">
+                      <label>Price</label><input type="text" name="price" placeholder="Price here">
                     </div>
                     <div class="post_field details">
                       <label>Details</label>
-                      <textarea placeholder="Say something about the goods"  required></textarea>
+                      <textarea name="detail" placeholder="Say something about the goods"  required></textarea>
           
                     </div>
                 </div>
@@ -117,19 +121,19 @@
                 
                 <div class="options">
                   <p>Add to Your Post</p>
-                  <ul class="list">
+                  
                     
                   <label for="image">
-                    <input type="file" accept="image/*" name="image" id="image" onchange="loadFile(event)" style="display:none;"/>
+                    <input type="file" accept="image/*" name="image" id="image"  />
                     <img id="output" src="icons/gallery.svg"/>
                  </label>
     
-    
-    
-                  </ul>
                 </div>
-                <button>Post</button>
+                <button type="submit" name="post">Post</button>
               </form>
+              
+
+             
             </section>
             
           
