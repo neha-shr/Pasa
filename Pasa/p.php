@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="index.css">
 
  </head>
-<body>
+
+
 
 <body>
 
@@ -22,7 +23,7 @@
 <header class="header">
         <nav class="nav container">
             
-            <div class="navigation d-flex">
+            <div class="navigation flex-d">
                     
                 <!--Logo-->
                 <div class="logo">
@@ -33,18 +34,14 @@
                 <!--Menu bar-->
                 <div class="menu">
     
-                    <div class="top">
-                        <span class="close">Close <i class="bx bx-x"></i></span>
-                    </div>
-    
-                    <ul class="nav-list d-flex">
+                    <ul class="nav-list flex-d">
     
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link">Home</a>
+                            <a href="main.html" class="nav-link">Home</a>
                         </li>
                         
                         <li class="nav-item">
-                          <a href="product.html" class="nav-link">Product</a>
+                          <a href="product.html" class="nav-link active">Product</a>
                       </li>
                         <!-- <li class="nav-item">
                             <a href="#service" class="nav-link">Service</a>
@@ -57,7 +54,7 @@
                 </div>
 
        
-              <div class="d-flex logout">
+              <div class="flex-d logout">
                 <button type="submit" name="logout"><a href="logout.php">Logout</a></button>
             </div>
 
@@ -138,15 +135,15 @@
         <div class="menu">
             <h3>Menu</h3>
             <ul class="menu-name">
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#About">About</a></li>
-                <li><a href="#Service">Service</a></li>
+                <li><a href="main.html">Home</a></li>
+              
+                <li><a href="product.php">Product</a></li>
                 <li><a href="sell.html">Sell</a></li>
             </ul>
         </div>
         <div class="contact">
             <h3>Contacts</h3>
-            <p> <img src="icons/search-location-solid.svg" alt=""> Location</p>
+            <p> <img src="icons/search-location-solid.svg" alt=""> Location:Lalitpur</p>
             <p><img src="icons/phone-solid.svg" alt=""> 986694358</p>
             <p><img src="icons/envelope-regular.svg" alt=""><a href="mailto:abc@gmail.com">abc@gmail.com</a> </p>
         </div>

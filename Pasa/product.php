@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title></title>
+ <title>Pasa</title>
+ <link rel="stylesheet" href="index.css">
  <?php ?>
 
 </head>
@@ -90,6 +91,55 @@ button:hover{
  
 </style>
 <body>
+
+
+<header class="header">
+        <nav class="nav container">
+            
+            <div class="navigation flex-d">
+                    
+                <!--Logo-->
+                <div class="logo">
+                   <!-- <h2>Pasa</h2> -->
+                   <img src="icons/logo.png" alt="Logo"/>
+                </div>
+
+                <!--Menu bar-->
+                <div class="menu">
+    
+                    <ul class="nav-list flex-d">
+    
+                        <li class="nav-item">
+                            <a href="main.html" class="nav-link">Home</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                          <a href="product.html" class="nav-link active">Product</a>
+                      </li>
+                        <!-- <li class="nav-item">
+                            <a href="#service" class="nav-link">Service</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a href="sell.html" class="nav-link">Sell</a>
+                        </li>
+                
+                    </ul>
+                </div>
+
+       
+              <div class="flex-d logout">
+                <button type="submit" name="logout"><a href="logout.php">Logout</a></button>
+            </div>
+
+    
+            </div>
+        
+        </nav>
+
+</header>
+
+
+
 <div class="main">
 <?php 
      include "dbconn.php";
@@ -134,5 +184,40 @@ button:hover{
 
 
 </div>
+
+
+
+
+    <!--Footer part-->
+    <footer id="footer-part" class="section footer">
+    <div class="footer-container">
+        <div class="menu">
+            <h3>Menu</h3>
+            <ul class="menu-name">
+                <li><a href="main.html">Home</a></li>
+              
+                <li><a href="product.php">Product</a></li>
+                <li><a href="sell.html">Sell</a></li>
+            </ul>
+        </div>
+        <div class="contact">
+            <h3>Contacts</h3>
+            <p> <img src="icons/search-location-solid.svg" alt=""> Location:Lalitpur</p>
+            <p><img src="icons/phone-solid.svg" alt=""> 986694358</p>
+            <p><img src="icons/envelope-regular.svg" alt=""><a href="mailto:abc@gmail.com">abc@gmail.com</a> </p>
+        </div>
+        <div class="social-media">
+            <h3>Follow us on</h3>
+            <img src="icons/facebook-brands.svg" alt="">
+            <img src="icons/instagram-brands.svg" alt="">
+            <img src="icons/twitter-square-brands.svg" alt="">
+            <img src="icons/linkedin-brands.svg" alt="">
+        </div>
+    </div>
+
+    <div class="credit"> copyright @ 2021 by <span>Pasa designer</span> </div>
+
+
+  </footer>
 </body>
 </html>

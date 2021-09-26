@@ -12,16 +12,14 @@ body{
 	align-items: center;
 	min-height: 100vh;
 	font-family: 'Jost', sans-serif;
-	background:lavender;
 }
-.main{
-	width: 350px;
-	height: 550px;
-	/* background: var(--primary); */
+.main-box{
+	width: 400px;
+	height: 600px;	
 	overflow: hidden;
-	/* background: url("1.jpg") no-repeat center/ cover; */
-	border-radius: 10px;
-	box-shadow: 5px 20px 50px #000;
+	border-radius: 1rem;
+	box-shadow: 5px 10px 25px #222;
+	background: lavender;
 }
 #chk{
 	display: none;
@@ -30,9 +28,10 @@ body{
 	position: relative;
 	width:100%;
 	height: 100%;
+	
 }
 label{
-	/* color: #fff; */
+	
 	font-size: 2.3em;
 	justify-content: center;
 	display: flex;
@@ -96,6 +95,9 @@ button{
 	transition: .2s ease-in;
 	cursor: pointer;
 }
+.signup button:hover{
+	background: var(--primary) ;
+}
 button:hover{
 	background: lavender;
 	color: #000;
@@ -103,17 +105,19 @@ button:hover{
 .login{
 	height: 460px;
 	background: var(--primary);
-	border-radius: 60% / 10%;
 	transform: translateY(-180px);
 	transition: .8s ease-in-out;
 }
 .login label{
 	color: #fff;
 	transform: scale(.5);
+	
 }
 
 #chk:checked ~ .login{
 	transform: translateY(-500px);
+	border-radius: 60% / 10%;
+	transition: all 0.9s ease-in-out;
 }
 #chk:checked ~ .login label{
 	transform: scale(1);	
