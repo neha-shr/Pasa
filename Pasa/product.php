@@ -3,7 +3,6 @@
 <head>
  <title></title>
  <?php ?>
-
 </head>
 
 <style type="text/css">

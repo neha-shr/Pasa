@@ -34,7 +34,8 @@ if(isset($_POST['signup'])){
                     alert("Connection Successful");
                 </script>
                 <?php
-                include 'main.html';
+                // include 'main.html';
+                header("location:main.html");
             }
             else{
                 ?>

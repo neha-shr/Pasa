@@ -12,10 +12,17 @@
     <!--Css Links-->
     <link rel="stylesheet" href="index.css">
 
+<script type="text/javascript">
+function message(){
+    alert("confirming your purchase!");
+    document.write("The product will be delivered soon! Thank you for your visit!");
+}
+</script>
+
  </head>
 <body>
 
-<body>
+
 
 
 
@@ -118,7 +125,7 @@
            
        
 
-           <button class="product-btn"> Buy Now</a><br></button>
+           <button class="product-btn" onclick = "message();"> Buy Now</button>
 
            <h3>Details</h3><br>
           <p> <?php  echo $result['detail'];   ?>

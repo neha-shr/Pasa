@@ -24,8 +24,9 @@
                 $password_decode = password_verify($password, $pass);
 
                 if($password_decode){
-                    echo "login successful";
-                   include 'main.html';
+                    // echo "login successful";
+                //    include 'main.html';
+                header("location:main.html");
                 }else{
                     echo "Password Incorrect";
                 }
