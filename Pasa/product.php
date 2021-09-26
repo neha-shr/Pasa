@@ -19,24 +19,29 @@ body{
 .main{
 
  margin: 2%;
- display: flex;
- justify-content: center;
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
 }
 
 .card{
-     width: 30%;
+     width: 80%;
      display: inline-block;
      box-shadow: 2px 2px 20px black;
      border-radius: 5px; 
      margin: 2%;
      overflow: hidden;
+     height:27rem;
  
   word-wrap: break-word;
+  display:grid;
+  place-items:center;
+  margin-bottom: 50px;
 
     }
 
 .image img{
-  width: 100%;
+  width: 100px;
+  height:200px;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   
@@ -74,9 +79,7 @@ button{
   border: 1px solid black;
   border-radius: 5px;
   padding:10px;
-  justify-content: center;
-  
-  vertical-align: middle;
+
 }
 button:hover{
   background-color: black;
@@ -87,17 +90,24 @@ button:hover{
  
 </style>
 <body>
-
-<?php
-
-    include "dbconn.php";
-    $selectquery = "select * from post";
-    $query = mysqli_query($conn, $selectquery);
-    $result = mysqli_fetch_array($query);
-    while($result = mysqli_fetch_array($query)){
+<div class="main">
+<?php 
+     include "dbconn.php";
+   
+     $selectquery = "select * from post";
+     $query = mysqli_query($conn, $selectquery);
+     $result = mysqli_fetch_array($query);
+     if($query-> num_rows > 0){
+     while($result = mysqli_fetch_array($query)){
+       $id=$result['id'];
+       $title=$result['title'];
+       $price=$result['price'];
+       $image=$result['image'];
+       $detail=$result['detail'];
+       
 ?>
 
-<div class="main">
+<form method="GET" action="p.php">
     <div class="card">
 
         <div class="image">
@@ -109,21 +119,20 @@ button:hover{
         <div class='price'>
             <?php  echo $result['price'];   ?>
         </div>
-        <div class="des">
-            <?php  echo $result['detail'];   ?>
- 
         
-        </div>
-        <button name ='buy' id='buy'>BUY</button>
+     <!-- <button type="button"  id="<?php $id ?>">Add</button> -->
+     <a href="p.php?id=<?php echo $id; ?>"> View More</a> 
     </div>
-</div>
-  
+</form>
+
 <?php
+     }
     }
-?>
+    ?>  
 
 
 
 
+</div>
 </body>
 </html>
