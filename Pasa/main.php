@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width= , initial-scale=1.0">
+    <meta name="viewport" content="width= device-width , initial-scale=1.0">
     <title>Pasa</title>
 
     
@@ -18,7 +18,7 @@
     <header class="header">
         <nav class="nav container">
             
-            <div class="navigation d-flex">
+            <div class="navigation flex-d">
                     
                 <!--Logo-->
                 <div class="logo">
@@ -27,6 +27,7 @@
                 </div>
 
                 <!--Menu bar-->
+<<<<<<< HEAD:Pasa/main.php
                 <div class="menu">
     
     
@@ -34,6 +35,13 @@
     
                         <li class="nav-item">
                             <a href="main.php" class="nav-link">Home</a>
+=======
+                <div>
+                    <ul class="nav-list flex-d">
+    
+                        <li class="nav-item">
+                            <a href="main.html" class="nav-link active">Home</a>
+>>>>>>> 72e42377568705d499a6a2f776e45374f1c88594:Pasa/main.html
                         </li>
                         
                         <li class="nav-item">
@@ -50,10 +58,10 @@
                 </div>
 
        
-              <div class="d-flex logout">
-                <button type="submit" name="logout"><a href="logout.php">Logout</a></button>
-            </div>
-
+               <div class="logout flex-d ">
+                  <button type="submit" name="logout"><a href="logout.php">Logout</a></button>
+            
+                </div>
     
             </div>
         
@@ -63,14 +71,14 @@
 
         <!--Imager Part-->
         <div class="special">
-            <div class="special-content d-flex container">
+            <div class="special-content flex-d container">
                 <div class="left">
                     <span class="subtitle">GET OUR SPECIAL OFFERS</span>
                     <h1 class="title">UP TO
                         <span class="color">50% <br> Discount</span>
                     on This Dashain
                     </h1>
-                    <h5>From 14th sep to 20th sep</h5>
+                    <h5>From 26th sep to 30th sep</h5>
                     <a href="sessioncheck.php" class="btn">SHOP NOW</a>
                 </div>
     
@@ -182,14 +190,19 @@
         <div class="menu">
             <h3>Menu</h3>
             <ul class="menu-name">
+<<<<<<< HEAD:Pasa/main.php
                 <li><a href="main.php">Home</a></li>
+=======
+                <li><a href="main.html">Home</a></li>
+
+>>>>>>> 72e42377568705d499a6a2f776e45374f1c88594:Pasa/main.html
                 <li><a href="product.php">Product</a></li>
                 <li><a href="sell.html">Sell</a></li>
             </ul>
         </div>
         <div class="contact">
             <h3>Contacts</h3>
-            <p> <img src="icons/search-location-solid.svg" alt=""> Location</p>
+            <p> <img src="icons/search-location-solid.svg" alt=""> Location:Lalitpur</p>
             <p><img src="icons/phone-solid.svg" alt=""> 986694358</p>
             <p><img src="icons/envelope-regular.svg" alt=""><a href="mailto:abc@gmail.com">abc@gmail.com</a> </p>
         </div>

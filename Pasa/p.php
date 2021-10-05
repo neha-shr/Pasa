@@ -16,6 +16,12 @@ function message(){
 }
 </script>
 
+<<<<<<< HEAD
+=======
+ </head>
+
+
+>>>>>>> 72e42377568705d499a6a2f776e45374f1c88594
 
 
     
@@ -31,7 +37,7 @@ function message(){
 <header class="header">
         <nav class="nav container">
             
-            <div class="navigation d-flex">
+            <div class="navigation flex-d">
                     
                 <!--Logo-->
                 <div class="logo">
@@ -42,6 +48,7 @@ function message(){
                 <!--Menu bar-->
                 <div class="menu">
     
+<<<<<<< HEAD
     
                     <ul class="nav-list d-flex">
     
@@ -51,6 +58,16 @@ function message(){
                         
                         <li class="nav-item">
                           <a href="product.php" class="nav-link">Product</a>
+=======
+                    <ul class="nav-list flex-d">
+    
+                        <li class="nav-item">
+                            <a href="main.html" class="nav-link">Home</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                          <a href="product.html" class="nav-link active">Product</a>
+>>>>>>> 72e42377568705d499a6a2f776e45374f1c88594
                       </li>
                         <!-- <li class="nav-item">
                             <a href="#service" class="nav-link">Service</a>
@@ -63,7 +80,7 @@ function message(){
                 </div>
 
        
-              <div class="d-flex logout">
+              <div class="flex-d logout">
                 <button type="submit" name="logout"><a href="logout.php">Logout</a></button>
             </div>
 
@@ -192,15 +209,20 @@ function message(){
         <div class="menu">
             <h3>Menu</h3>
             <ul class="menu-name">
+<<<<<<< HEAD
                 <li><a href="main.php">Home</a></li>
              
+=======
+                <li><a href="main.html">Home</a></li>
+              
+>>>>>>> 72e42377568705d499a6a2f776e45374f1c88594
                 <li><a href="product.php">Product</a></li>
                 <li><a href="sell.html">Sell</a></li>
             </ul>
         </div>
         <div class="contact">
             <h3>Contacts</h3>
-            <p> <img src="icons/search-location-solid.svg" alt=""> Location</p>
+            <p> <img src="icons/search-location-solid.svg" alt=""> Location:Lalitpur</p>
             <p><img src="icons/phone-solid.svg" alt=""> 986694358</p>
             <p><img src="icons/envelope-regular.svg" alt=""><a href="mailto:abc@gmail.com">abc@gmail.com</a> </p>
         </div>
