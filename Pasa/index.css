@@ -343,7 +343,7 @@ h2{
   padding: 10px;
 }
 select {
-<<<<<<< HEAD
+
   font-family: "Poppins", sans-serif;
   width: 20rem;
   padding: 0.7rem;
@@ -370,15 +370,14 @@ button{
   cursor: pointer;
  margin-top: 15px;
 }
-=======
-    font-family: "Poppins", sans-serif;
+
+    /* font-family: "Poppins", sans-serif;
     width: 20rem;
     padding: 0.7rem;
     border: 1px solid #ccc;
     appearance: none;
     outline: none;
-  }
-<<<<<<< HEAD
+  } */
   .single-product .product-btn{
       display: inline-block;
       border: none;
@@ -405,12 +404,8 @@ button{
       font-size: 15px;
       font-weight: 400;
   }  */
-=======
- 
->>>>>>> 72e42377568705d499a6a2f776e45374f1c88594
 
-  
->>>>>>> fe8773b506fbeacfffd0b30ddc02e557d131feaf
+
   
 /* Footer Section */
 .footer{
@@ -468,21 +463,11 @@ button{
     height: 2.5rem;
     width: 7rem;
     font-size: 2rem;
-<<<<<<< HEAD
   
     overflow: hidden;
    padding: auto;
   
     background: var(--primary);
-=======
-    padding: 0.5rem;
-    overflow: hidden;
-     background: var(--primary);
-    cursor: pointer;
-    text-align: center;
-    margin: 0.5rem;
-    position: relative;
->>>>>>> 72e42377568705d499a6a2f776e45374f1c88594
   }
   .logout button{
     border: none;
