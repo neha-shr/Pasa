@@ -12,7 +12,7 @@ body{
 	align-items: center;
 	min-height: 100vh;
 	font-family: 'Jost', sans-serif;
-	background:lavender;
+	
 }
 .main{
 	width: 350px;
@@ -22,6 +22,7 @@ body{
 	/* background: url("1.jpg") no-repeat center/ cover; */
 	border-radius: 10px;
 	box-shadow: 5px 20px 50px #000;
+	background:lavender;
 }
 #chk{
 	display: none;
@@ -103,7 +104,7 @@ button:hover{
 .login{
 	height: 460px;
 	background: var(--primary);
-	border-radius: 60% / 10%;
+	
 	transform: translateY(-180px);
 	transition: .8s ease-in-out;
 }
@@ -114,7 +115,10 @@ button:hover{
 
 #chk:checked ~ .login{
 	transform: translateY(-500px);
+	border-radius: 60% / 10%;
+	transition: all 0.9s ease-in-out;
 }
+
 #chk:checked ~ .login label{
 	transform: scale(1);	
 }

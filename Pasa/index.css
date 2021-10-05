@@ -16,6 +16,9 @@ html{
     
 }
 body{
+    font-family: arial;
+   }
+body{
     
     font-size: 1.6rem;
     color: black;
@@ -68,6 +71,9 @@ max-width: 100%;
 .navigation{
     height: 6rem;
     justify-content: space-between;
+}
+.nav {
+    position:fixed;
 }
 .nav-item:not(last-child){
     margin-right: 0.8rem ;
@@ -346,42 +352,73 @@ max-width: 100%;
 
   /* Product Details */
   .product-description{
-      margin: 80px;
-  }
-  .single-product{
-      margin-top: 80px;
-      max-width: 1080px;
-      margin: auto;
-      padding-left: 25px;
-      padding-right: 25px;
-  }
-  .row{
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: space-around;
-  }
+    margin: 80px;
+}
+.single-product{
+    margin-top: 80px;
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.roww{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
-  .col-2{
-    height: 50px;
-    width : 50px
-   
-  }
-  .price{
-    color: #e63306;
-    font-size: 600; 
-    font-style: bold;
-    padding: 10px;
+.col-2{
+  flex-basis: 40%;
+
+
+ 
+}
+h3{
+    margin-top: 15px;;
+    font-size: 30px;
+}
+h2{
+  font-size: 45px;
+  color: rgb(238, 116, 79);
+  margin-bottom: 20px;
+}
+.im{
+    height: 80%;
+}
+.price{
+  color: #e63306;
+  font-size: 600; 
+  font-style: bold;
+  padding: 10px;
 }
 select {
-    font-family: "Poppins", sans-serif;
-    width: 20rem;
-    padding: 0.7rem;
-    border: 1px solid #ccc;
-    appearance: none;
-    outline: none;
-  }
- 
+  font-family: "Poppins", sans-serif;
+  width: 20rem;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  appearance: none;
+  outline: none;
+}
+.details{
+  margin-top: 20px;
+}
+p .details {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+button{
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  border: 0;
+  border-radius: 5px;
+  background: #fe980f;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  cursor: pointer;
+ margin-top: 15px;
+}
 
   
   
@@ -437,9 +474,10 @@ select {
     height: 3rem;
     width: 7rem;
     font-size: 2rem;
-    padding: 1rem;
+  
     overflow: hidden;
-    margin-right: 10px;
+   padding: auto;
+  
     background: var(--primary);
   }
   .logout button{
@@ -449,3 +487,78 @@ select {
     font-size: 1.5rem;
 }
 
+
+
+
+/* product */
+
+
+
+
+
+.main{
+
+ margin: 2%;
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+}
+
+.card{
+     width: 83%;
+     display: inline-block;
+     box-shadow: 2px 2px 20px black;
+     border-radius: 5px; 
+     margin: 2%;
+     overflow: hidden;
+     height:40rem;
+ 
+  word-wrap: break-word;
+  display:grid;
+  place-items:center;
+  margin-bottom: 50px;
+
+    }
+   
+.imagee img{
+  width: 100%;
+  height:200px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  
+
+ 
+ }
+
+.titlee{
+ 
+  text-align: center;
+  padding: 10px;
+  
+ }
+
+h1{
+  font-size: 20px;
+ }
+.pricee{
+    color: #ec3f13;
+    text-align: center;
+  padding: 5px;
+ }
+
+
+
+button .fa , .view{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    background-color: rgb(238, 152, 103);
+    border: 1px solid rgb(223, 219, 12);
+    border-radius: 5px;
+    padding:10px;
+  
+  }
+  button:hover{
+    background-color: rgb(216, 139, 116);
+    color: white;
+    transition: .5s;
+    cursor: pointer;
+  }

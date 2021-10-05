@@ -4,13 +4,10 @@
 
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <meta name="viewport" content="width= , initial-scale=1.0">
     <title>Pasa</title>
 
-    
 
-    <!--Css Links-->
-    <link rel="stylesheet" href="index.css">
 
 <script type="text/javascript">
 function message(){
@@ -19,13 +16,18 @@ function message(){
 }
 </script>
 
+
+
+    
+
+    <!--Css Links-->
+    <link rel="stylesheet" href="index.css">
+
  </head>
+ 
 <body>
 
-
-
-
-
+<!--Header part-->
 <header class="header">
         <nav class="nav container">
             
@@ -40,18 +42,15 @@ function message(){
                 <!--Menu bar-->
                 <div class="menu">
     
-                    <div class="top">
-                        <span class="close">Close <i class="bx bx-x"></i></span>
-                    </div>
     
                     <ul class="nav-list d-flex">
     
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link">Home</a>
+                            <a href="main.php" class="nav-link">Home</a>
                         </li>
                         
                         <li class="nav-item">
-                          <a href="product.html" class="nav-link">Product</a>
+                          <a href="product.php" class="nav-link">Product</a>
                       </li>
                         <!-- <li class="nav-item">
                             <a href="#service" class="nav-link">Service</a>
@@ -73,7 +72,7 @@ function message(){
         
         </nav>
 
-</header>
+
 
 
 
@@ -105,7 +104,7 @@ function message(){
 <form method="GET" action="cart.php">
  <section class="product-description">
      <div class="small-container single-product">
-       <div class="row">
+       <div class="roww">
          <div class="col-2 im" >
  
          <img src=" <?php  echo $result['image'];   ?> "/>
@@ -125,10 +124,10 @@ function message(){
            
        
 
-           <button class="product-btn" onclick = "message();"> Buy Now</button>
+           <button class="fa" onclick = "message();"> Buy Now</button>
 
-           <h3>Details</h3><br>
-          <p> <?php  echo $result['detail'];   ?>
+           <h3>Details</h3>
+          <p class="details"> <?php  echo $result['detail'];   ?>
            </p>
              
          </div>
@@ -139,15 +138,63 @@ function message(){
 
      
 
-    <!--Footer part-->
-    <footer id="footer-part" class="section footer">
+ <!-- Product -->
+<section class="product-part">
+    <div class="title"><h1>Related Products</h1></div>
+<div class="main">
+<?php 
+     include "dbconn.php";
+   
+     $selectquery = "select * from post";
+     $query = mysqli_query($conn, $selectquery);
+     $result = mysqli_fetch_array($query);
+     if($query-> num_rows > 0){
+     while($result = mysqli_fetch_array($query)){
+       $id=$result['id'];
+       $title=$result['title'];
+       $price=$result['price'];
+       $image=$result['image'];
+       $detail=$result['detail'];
+       
+?>
+
+<form method="GET" action="p.php">
+    <div class="card">
+
+        <div class="imagee">
+            <img src=" <?php  echo $result['image'];   ?> "/>
+        </div>
+        <div class="titlee">
+            <?php  echo $result['title'];   ?> 
+        </div>
+        <div class='pricee'>
+            <?php  echo $result['price'];   ?>
+        </div>
+        
+        <div>
+     <button class="view">    <a href="p.php?id=<?php echo $id; ?>"> View More</a> </button>
+         </div> 
+    </div>
+</form>
+
+<?php
+     }
+    }
+    ?>  
+
+</div>
+  </section>
+
+
+   <!--Footer part-->
+   <footer id="footer-part" class="section footer">
     <div class="footer-container">
         <div class="menu">
             <h3>Menu</h3>
             <ul class="menu-name">
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#About">About</a></li>
-                <li><a href="#Service">Service</a></li>
+                <li><a href="main.php">Home</a></li>
+             
+                <li><a href="product.php">Product</a></li>
                 <li><a href="sell.html">Sell</a></li>
             </ul>
         </div>
@@ -170,6 +217,7 @@ function message(){
 
 
   </footer>
+
 
 
 </body>

@@ -29,14 +29,11 @@
                 <!--Menu bar-->
                 <div class="menu">
     
-                    <div class="top">
-                        <span class="close">Close <i class="bx bx-x"></i></span>
-                    </div>
     
                     <ul class="nav-list d-flex">
     
                         <li class="nav-item">
-                            <a href="main.html" class="nav-link">Home</a>
+                            <a href="main.php" class="nav-link">Home</a>
                         </li>
                         
                         <li class="nav-item">
@@ -135,126 +132,49 @@
 <!-- Product -->
 <section class="product-part">
     <div class="title"><h1>Product</h1></div>
+<div class="main">
+<?php 
+     include "dbconn.php";
+   
+     $selectquery = "select * from post";
+     $query = mysqli_query($conn, $selectquery);
+     $result = mysqli_fetch_array($query);
+     if($query-> num_rows > 0){
+     while($result = mysqli_fetch_array($query)){
+       $id=$result['id'];
+       $title=$result['title'];
+       $price=$result['price'];
+       $image=$result['image'];
+       $detail=$result['detail'];
+       
+?>
 
-    <div class="product-center container">
-        <div class="product">
-          <div class="img-cover">
-            <img src="dress/m.jpg" alt="" />
-          </div>
-          <p>Handkerchief Hem Dress</p>
-          <div class="rating">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bx-star"></i>
-          </div>
-          <div class="price">$45</div>
-        </div>
-  
-        <div class="product">
-          <div class="img-cover">
-            <img src="dress/n.jpg" alt="" />
-          </div>
-          <p>Kimino Dress</p>
-          <div class="rating">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bx-star"></i>
-          </div>
-          <div class="price">$49</div>
-        </div>
-  
-        <div class="product">
-          <div class="img-cover">
-            <img src="dress/o.jpg" alt="" />
-          </div>
-          <p>Sun Dress</p>
-          <div class="rating">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bx-star"></i>
-          </div>
-          <div class="price">$35</div>
-        </div>
-        <div class="product">
-          <div class="img-cover">
-            <img src="dress/s.jpg" alt="" />
-          </div>
-          <p>Halter</p>
-          <div class="rating">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bx-star"></i>
-          </div>
-          <div class="price">$46</div>
-        </div>
-        <div class="product">
-          <div class="img-cover">
-            <img src="dress/Wrap-Dress.jpg" alt="" />
-          </div>
-          <p>Wrap-Dress</p>
-          <div class="rating">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bx-star"></i>
-          </div>
-          <div class="price">$65</div>
-        </div>
-        <div class="product">
-          <div class="img-cover">
-            <img src="dress/p.jpg" alt="" />
-          </div>
-          <p>Blazer Type</p>
-          <div class="rating">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bx-star"></i>
-          </div>
-          <div class="price">$55</div>
-        </div>
-        <div class="product">
-          <div class="img-cover">
-            <img src="dress/q.jpg" alt="" />
-          </div>
-          <p>Bell- Sleeve Dress</p>
-          <div class="rating">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bx-star"></i>
-          </div>
-          <div class="price">$70</div>
-        </div>
-        <div class="product">
-          <div class="img-cover">
-            <img src="dress/r.jpg" alt="" />
-          </div>
-          <p>Pinafore Dress</p>
-          <div class="rating">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bx-star"></i>
-          </div>
-          <div class="price">$43</div>
-        </div>
-      </div>
-</section>
+<form method="GET" action="p.php">
+    <div class="card">
 
+        <div class="imagee">
+            <img src=" <?php  echo $result['image'];   ?> "/>
+        </div>
+        <div class="titlee">
+            <?php  echo $result['title'];   ?> 
+        </div>
+        <div class='pricee'>
+            <?php  echo $result['price'];   ?>
+        </div>
+        
+        <div>
+     <button class="view">    <a href="p.php?id=<?php echo $id; ?>"> View More</a> </button>
+         </div> 
+    </div>
+</form>
 
+<?php
+     }
+    }
+    ?>  
+
+</div>
+  </section>
 
     <!--Footer part-->
   <footer id="footer-part" class="section footer">
@@ -262,9 +182,8 @@
         <div class="menu">
             <h3>Menu</h3>
             <ul class="menu-name">
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#About">About</a></li>
-                <li><a href="#Service">Service</a></li>
+                <li><a href="main.php">Home</a></li>
+                <li><a href="product.php">Product</a></li>
                 <li><a href="sell.html">Sell</a></li>
             </ul>
         </div>
@@ -293,4 +212,3 @@
 </body>
 
 </html>
-

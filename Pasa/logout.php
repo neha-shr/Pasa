@@ -1,8 +1,7 @@
 <?php
-include '../connect.php';
+include 'dbconn.php';
 session_start();
+session_destroy();
 
-session_unset();
-
-header("location: index.html");
+header("location: index.php");
 ?>

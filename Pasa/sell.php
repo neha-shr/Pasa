@@ -20,6 +20,7 @@
 
     
         $iquery = mysqli_query($conn, $sql);
+        header("location:main.php");
     }
     else{
         echo "Not inserted";
